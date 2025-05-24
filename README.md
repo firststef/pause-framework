@@ -44,12 +44,11 @@ async function example() {
   const result = await pause.run(
     'unique-block-id-1',                // <-- Mandatory unique ID
     "Calculate the sum of two numbers", // <-- Description for AI context
-    (a, b) => {                         // <-- The function to run
+    () => {
+      let a = 1;
+      let b = 2;
       return a + b;
-    },
-    {},                                 // <-- Scope object (can be empty for simple functions)
-    5,                                  // <-- First argument for the function (a)
-    10                                  // <-- Second argument for the function (b)
+    } // No external scope or args needed for this self-contained function
   );
   console.log('Result:', result);
 }
