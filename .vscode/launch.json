@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Jest Tests",
+      "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+      "args": [
+        "-i" // Run tests serially (--runInBand) - Crucial for debugging
+        // You can add specific test file paths here if needed, e.g.:
+        // "tests/pause.test.js" 
+      ],
+      "runtimeArgs": [
+        "--experimental-vm-modules" // Needed based on your package.json test script
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true // May help with breakpoint accuracy in async code
+    }
+  ]
+} 

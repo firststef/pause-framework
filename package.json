@@ -1,0 +1,46 @@
+{
+  "name": "pause-framework",
+  "version": "0.1.0",
+  "description": "A framework to pause, debug, and dynamically modify code execution.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firststef/pause-framework.git"
+  },
+  "homepage": "https://github.com/firststef/pause-framework#readme",
+  "bugs": {
+    "url": "https://github.com/firststef/pause-framework/issues"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setupTests.js"
+    ]
+  },
+  "keywords": [
+    "debug",
+    "runtime",
+    "modify",
+    "pause",
+    "ai",
+    "langchain"
+  ],
+  "author": "firststef",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/openai": "^0.5.10",
+    "langchain": "^0.3.24"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "jest": "^29.7.0"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ]
+}
